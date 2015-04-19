@@ -1,0 +1,25 @@
+body {
+  font: 20px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: tomato;
+}
+
+.footer {
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+	background-color: #ddd;
+	font: 24px;
+	height: 80px;
+	line-height: 80px;
+	text-align: center;
+	color: #333;
+}
+
+.menu {
+	width: 100%;
+	background: #ddd;
+	padding: 10px;
+}

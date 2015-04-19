@@ -1,0 +1,13 @@
+<h1 class="page-header">{{ title }}</h1>
+<p class="lead">Node, Express, Hogan, and MongoDB working in unison to bring you a Blogging Application!</p>
+{{#articles.length}}
+	<div>
+	{{#articles}}
+		<h2><a href="{{slug}}">{{title}}</a></h2>
+	{{/articles}}
+	</div>
+{{/articles.length}}
+{{^articles.length}}
+	<p>{{articles.length}} articles found!</p>
+	<p>There is no published content yet. <a href="/login">Log in</a> to post and publish.</p>
+{{/articles.length}}

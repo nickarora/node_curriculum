@@ -1,0 +1,31 @@
+<div class="menu">
+  <ul class="nav nav-pills pull-right">
+
+    <li class="active">
+      <a href="/">Home</a>
+    </li>
+    
+    {{#loggedIn}}
+    <li class="active">
+      <a href="/post">Post</a>
+    </li>
+
+    {{#admin}}
+    <li class="active">
+      <a href="/admin">Admin</a>
+    </li>
+    {{/admin}}
+
+    <li class="active">
+      <a href="/logout">Log out</a>
+    </li>
+    {{/loggedIn}}
+
+    {{^loggedIn}}
+    <li class='active'>
+      <a href="/login">Log in</a>
+    </li>
+    {{/loggedIn}}
+  </ul>
+  <div class="clearfix"></div>
+</div>

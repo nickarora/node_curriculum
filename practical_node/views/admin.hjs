@@ -1,0 +1,39 @@
+<div class='admin'>
+	{{^articles.length}}
+		<p>Nothing to display.  Ad a new <a href="/post">article</a>.</p>
+	{{/articles.length}}
+	{{#articles.length}}
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th colspan="2">Actions</th>
+					<th>Post Title</th>
+				</tr>
+			</thead>
+			<tbody>
+				{{#articles}}
+					{{#published}}
+					<tr data-id="{{_id}}">
+					{{/published}}
+					{{^published}}
+					<tr data-id="{{_id}}" class="unpublished">
+					{{/published}}
+						<td class="action">
+							<button class="btn btn-danger btn-sm remove" type="button"><span class="glyphicon glyphicon-remove" title="Remove"></span></button>
+						</td>
+						<td>
+							{{#published}}
+								<button class="btn btn-default btn-sm publish" type="button"><span class="glyphicon glyphicon-pause" title="unpublish"></span></button>
+							{{/published}}
+							{{^published}}
+								<button class="btn btn-default btn-sm publish" type="button"><span class="glyphicon glyphicon-play" title="publish"></span></button>
+							{{/published}}
+						</td>
+						<td>{{title}}</td>
+					</tr>
+				{{/articles}}
+			</tbody>
+		</table>
+	{{/articles.length}}
+	<script src="/javascripts/admin.js"></script>
+</div>
